@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09251c">
+  <title>UAE Pulse | نبض العلم</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">UAE <span>PULSE.</span></a>
+    <span class="edition">حكاية علم · حكاية وطن</span>
+  </header>
+
+  <div class="modal-overlay" id="colorModal" aria-hidden="true">
+    <section class="modal-card" role="dialog" aria-modal="true"
+      aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal"
+        type="button" aria-label="إغلاق النافذة">×</button>
+
+      <div class="modal-color-preview" id="modalPreview"></div>
+      <p class="modal-eyebrow">UAE PULSE · ألوان الاتحاد</p>
+      <h2 id="modalTitle">الأخضر</h2>
+      <p id="modalDescription"></p>
+      <button class="modal-confirm" id="modalConfirm" type="button">
+        فهمت ذلك
+      </button>
+    </section>
+  </div>
+
+  <main>
+    <section class="hero">
+      
+<div class="emblem-showcase">
+  <div class="emblem-glow"></div>
+  <img
+    class="uae-emblem"
+    src="uae-emblem.png"
+    alt="شعار دولة الإمارات العربية المتحدة"
+    width="150"
+    height="150"
+  />
+  <span class="emblem-caption">روح الاتحاد · UAE PULSE</span>
+</div>
+
+      <p class="eyebrow">UNITED ARAB EMIRATES · 1971</p>
+      <h1>لكل لون حكاية.<br><span>ولكل حكاية وطن.</span></h1>
+      <p class="intro">
+        رحلة تفاعلية لاكتشاف قصة علم دولة الإمارات العربية المتحدة،
+        ومعاني ألوانه ورمزيته الوطنية.
+      </p>
+
+      <div class="flag-wrap">
+        <div class="flag" aria-label="علم دولة الإمارات العربية المتحدة">
+          <div class="flag-red" data-color="red" tabindex="0" role="button" aria-label="اكتشف اللون الأحمر"></div>
+          <div class="flag-stripes">
+            <div class="stripe green" data-color="green" tabindex="0" role="button" aria-label="اكتشف اللون الأخضر"></div>
+            <div class="stripe white" data-color="white" tabindex="0" role="button" aria-label="اكتشف اللون الأبيض"></div>
+            <div class="stripe black" data-color="black" tabindex="0" role="button" aria-label="اكتشف اللون الأسود"></div>
+          </div>
+        </div>
+        <p class="hint">حرّك المؤشر فوق أحد الألوان أو اضغط عليه</p>
+      </div>
+
+      <div class="color-info" aria-live="polite">
+        <span class="color-dot" id="colorDot"></span>
+        <div>
+          <h2 id="colorTitle">اكتشف ألوان العلم</h2>
+          <p id="colorDescription">
+            لكل لون دلالة، ولكل تفصيل قصة تستحق أن تُروى.
+          </p>
+        </div>
+      </div>
+
+      <a class="explore-link" href="#timeline">ابدأ الرحلة <span>↓</span></a>
+    </section>
+
+   
+<section class="timeline" id="timeline">
+  <p class="eyebrow">A NATION'S STORY</p>
+  <h2>رحلة العلم عبر الزمن</h2>
+  <p class="section-intro">
+    خلف هذا التصميم البسيط قصة وطنٍ اجتمعت فيه الرؤى والجهود
+    لتأسيس اتحاد. اكتشف كيف بدأت حكاية العلم، وكيف ارتبطت
+    بلحظة قيام دولة الإمارات العربية المتحدة، ولماذا بقي رمزًا
+    يجمع أبناء الوطن.
+  </p>
+
+  <div class="journey-progress" aria-label="محطات الرحلة التاريخية">
+    <span id="journeyProgressText">المحطة 1 من 3</span>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <div class="journey-layout">
+    <nav class="journey-nav" aria-label="اختر محطة تاريخية">
+      <button class="journey-tab active" type="button"
+        data-station="0" aria-pressed="true">
+        <span class="tab-number">01</span>
+        <span class="tab-copy">
+          <strong>فكرة التصميم</strong>
+          <small>مسابقة العلم · 1971</small>
+        </span>
+        <span class="tab-arrow">←</span>
+      </button>
+
+      <button class="journey-tab" type="button"
+        data-station="1" aria-pressed="false">
+        <span class="tab-number">02</span>
+        <span class="tab-copy">
+          <strong>لحظة الاتحاد</strong>
+          <small>2 ديسمبر 1971</small>
+        </span>
+        <span class="tab-arrow">←</span>
+      </button>
+
+      <button class="journey-tab" type="button"
+        data-station="2" aria-pressed="false">
+        <span class="tab-number">03</span>
+        <span class="tab-copy">
+          <strong>رمز الوطن</strong>
+          <small>العلم ومعانيه اليوم</small>
+        </span>
+        <span class="tab-arrow">←</span>
+      </button>
+    </nav>
+
+    <article class="journey-detail" aria-live="polite">
+      <div class="detail-topline">
+        <span class="detail-kicker" id="detailKicker">
+          المحطة الأولى
+        </span>
+        <span class="detail-year" id="detailYear">1971</span>
+      </div>
+
+      <h3 id="detailTitle">من فكرة إلى علم</h3>
+
+      <p class="detail-lead" id="detailLead">
+        لكل رمز بداية، وبداية علم الإمارات كانت فكرة تصميم
+        تعبّر عن دولة تتأهب لمرحلة جديدة من تاريخها.
+      </p>
+
+      <div class="detail-divider"></div>
+
+      <div class="detail-body" id="detailBody">
+        <p>
+          في أواخر عام 1971، نُشرت مسابقة لتصميم علم الدولة
+          عبر صحيفة الاتحاد. شارك عبدالله محمد المعينة في
+          المسابقة، وأصبح تصميمه هو العلم الذي ارتبط بقيام
+          دولة الإمارات العربية المتحدة.
+        </p>
+        <p>
+          لم يكن المطلوب مجرد ترتيب ألوان على قطعة قماش؛
+          فالعلم الوطني يمثل هوية الدولة، ويصبح علامة يتعرف
+          إليها الناس ويرتبطون بها في المناسبات الوطنية
+          والمحافل الدولية.
+        </p>
+      </div>
+
+      <div class="detail-highlight">
+        <span class="highlight-mark">✦</span>
+        <p id="detailHighlight">
+          المعلومة الأساسية: صمّم عبدالله محمد المعينة علم
+          دولة الإمارات بعد مشاركته في مسابقة نظمتها صحيفة الاتحاد.
+        </p>
+      </div>
+
+      <div class="journey-footer">
+        <span id="detailSourceLabel">المصدر: البوابة الرسمية لحكومة الإمارات</span>
+        <div class="journey-controls">
+          <button id="previousStation" class="nav-button secondary"
+            type="button" disabled>السابق</button>
+          <button id="nextStation" class="nav-button primary"
+            type="button">المحطة التالية <span>←</span></button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="history-sources">
+    <p class="eyebrow">LEARN FROM OFFICIAL SOURCES</p>
+    <h3>المعرفة تبدأ من المصدر</h3>
+    <p>
+      جُمعت المعلومات التاريخية الأساسية من المنصة الرسمية
+      لحكومة دولة الإمارات. يمكن الرجوع إلى المصادر الأصلية
+      لقراءة التفاصيل والتحقق من المعلومات.
+    </p>
+    <div class="source-links">
+  <a href="https://u.ae/ar/about-the-uae/history"
+    target="_blank" rel="noopener noreferrer">
+    تاريخ دولة الإمارات ↗
+  </a>
+
+  <a href="https://u.ae/ar/about-the-uae/fact-sheet"
+    target="_blank" rel="noopener noreferrer">
+    حقائق عن العلم وألوانه ↗
+  </a>
+</div>
+
+
+<div class="leaders-quotes" id="leadersQuotes">
+
+  <div class="quotes-heading">
+    <p class="eyebrow">VOICES OF THE UNION</p>
+    <h3>العلم في عيون قادتنا</h3>
+    <p class="quotes-intro">
+      كلمات خالدة تعبّر عن مكانة علم الإمارات، وما يحمله
+      من معاني الاتحاد والعزة والانتماء.
+    </p>
+  </div>
+
+  <div class="quotes-grid">
+
+
+  <!-- 1. الشيخ زايد -->
+  <article class="quote-card">
+    <div class="quote-image">
+      <img src="sheikh-zayed.jpg"
+           alt="الشيخ زايد بن سلطان آل نهيان">
+    </div>
+
+    <div class="quote-content">
+      <span class="quote-mark">“</span>
+      <blockquote>
+        علينا أن نستغني عن أعلامنا السابقة، وأن نرفع علم الاتحاد وحده،
+        لأن العلم الواحد يرمز إلى المصير الواحد، بكل معنى هذه الكلمة.
+      </blockquote>
+      <h4>الشيخ زايد بن سلطان آل نهيان</h4>
+      <p class="quote-date">مقولة تاريخية عن توحيد الراية · نُشرت في 2023</p>
+      <a href="https://www.albayan.ae/opinions/articles/2023-11-02-1.4756375"
+         target="_blank" rel="noopener noreferrer">
+        مصدر المقولة ↗
+      </a>
+    </div>
+  </article>
+
+  <!-- 2. الشيخ محمد بن زايد -->
+  <article class="quote-card">
+    <div class="quote-image">
+      <img src="sheikh-mohammed-bin-zayed.jpg"
+           alt="الشيخ محمد بن زايد آل نهيان">
+    </div>
+
+    <div class="quote-content">
+      <span class="quote-mark">“</span>
+      <blockquote>
+        في يوم العلم نرفع، بكل فخر واعتزاز، علم الدولة في قصر الحصن،
+        تجسيداً لما يمثله من معاني العزة والمجد والشموخ.
+      </blockquote>
+      <h4>الشيخ محمد بن زايد آل نهيان</h4>
+      <p class="quote-date">3 نوفمبر 2023 · يوم العلم</p>
+      <a href="https://www.mohamedbinzayed.ae/ar/latest-news-listing/2023/11/Sheikh-Mohamed-bin-Zayed-hails-UAEs-unity-and-loyalty-at-Flag-Day-ceremony-in-Abu-Dhabi"
+         target="_blank" rel="noopener noreferrer">
+        مصدر المقولة ↗
+      </a>
+    </div>
+  </article>
+
+  <!-- 3. الشيخ محمد بن راشد -->
+  <article class="quote-card">
+    <div class="quote-image">
+      <img src="sheikh-mohammed-bin-rashid.jpg"
+           alt="الشيخ محمد بن راشد آل مكتوم">
+    </div>
+
+    <div class="quote-content">
+      <span class="quote-mark">“</span>
+      <blockquote>
+        العلم أمانة نسهر على صونها ونسابق الزمن من أجل رفعتها.
+      </blockquote>
+      <h4>الشيخ محمد بن راشد آل مكتوم</h4>
+      <p class="quote-date">3 نوفمبر 2019 · يوم العلم</p>
+      <a href="https://www.wam.ae/ar/article/hszr9ej4-%D9%85%D8%AD%D9%85%D8%AF-%D8%A8%D9%86-%D8%B1%D8%A7%D8%B4%D8%AF-%D9%8A%D8%B1%D9%81%D8%B9-%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B3%D8%A7%D8%AD%D8%A9-%D8%A8%D8%B1%D8%AC-%D8%AE%D9%84%D9%8A%D9%81%D8%A9"
+         target="_blank" rel="noopener noreferrer">
+        مصدر المقولة ↗
+      </a>
+    </div>
+  </article>
+
+</div>
+
+</div>
+
+
+
+  </section>
+
+  </main>
+
+  <footer>
+    <p>UAE PULSE · تجربة رقمية تعليمية عن علم الإمارات</p>
+  </footer>
+</body>
+</html>
